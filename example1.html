@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        #search-box {
+            width: 300px;
+            padding: 10px;
+        }
+        
+        #result-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        #result-list li {
+            margin: 5px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Search Page</h1>
+    <input type="text" id="search-box" value="tag" placeholder="Enter Tag">
+    <button id="search-button" type="submit">Search</button>
+    <ul id="result-list">
+        <li>this</li>
+        <li>this</li>
+        <li>this</li>
+        <li>this</li>
+    </ul>
+
+
+    <script>
+        document.getElementById("search-button").addEventListener("click", function() {
+            var tagValue = document.getElementById("search-box").value;
+
+            // Update the src attribute of the iframe
+            var iframe = document.getElementById("result-iframe");
+            iframe.src = "http://13.233.223.48/cgi-bin/bhavishya/login.py?tag=" + encodeURIComponent(tagValue);
+        });
+    </script>
+
+
+</body>
+
+</html>

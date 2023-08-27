@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>AdVintage</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Heebo">
+</head>
+
+<!-- <style>
+    .overlay {
+        position: fixed;
+        top: 0;
+        /* bottom: 0; */
+        left: 0;
+        /* right: 1; */
+        background: rgba(0, 0, 0, 0.7);
+        /* transition: opacity 500ms; */
+        /* visibility: hidden; */
+        /* opacity: 0; */
+        opacity: 1;
+        margin-top: 52px;
+        margin-left: 1100px;
+        /* padding-right: -200px; */
+        border: black solid;
+    }
+    
+    .popup {
+        /* margin: ; */
+        padding: 20px;
+        background: #fff;
+        border-radius: 5px;
+        width: 150px;
+        position: relative;
+        transition: all 5s ease-in-out;
+    }
+    
+    .popup h2 {
+        margin-top: 0;
+        color: #333;
+        font-family: Tahoma, Arial, sans-serif;
+    }
+    
+    .popup .close {
+        position: absolute;
+        top: 1px;
+        right: 10px;
+        transition: all 200ms;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #333;
+    }
+    
+    .popup .close:hover {
+        color: #1414f5;
+    }
+    
+    .popup .content {
+        max-height: 30%;
+        overflow: auto;
+    }
+    
+    .popup li a {
+        text-decoration: none;
+        color: #333;
+    }
+    
+    .popup li a:hover {
+        color: #4311f5;
+    }
+    
+    .popup .close {
+        position: absolute;
+        top: 1px;
+        right: 10px;
+        transition: all 200ms;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #333;
+    }
+    
+    .popup .close:hover {
+        color: #1414f5;
+    }
+    
+    .popup .content {
+        max-height: 30%;
+        overflow: auto;
+    }
+</style> -->
+
+<script>
+    function showPopup1() {
+        document.getElementById("popup").style.display = "block";
+    }
+
+    function hidePopup1() {
+        document.getElementById("popup").style.display = "none";
+    }
+
+    function searchAndShowPopup1() {
+        var searchTerm = document.getElementById("myInput").value;
+        if (searchTerm) {
+            var iframe = document.getElementById("popupIframe");
+            var apiURL = "https://advintage.live/cgi-bin/bhavishya/search.py?tag=" + encodeURIComponent(searchTerm);
+            // document.getElementById("hello").innerHTML = apiURL;
+            iframe.src = apiURL;
+            showPopup1();
+        }
+    }
+    hidePopup1()
+</script>
+
+<!-- <script>
+    function showPopup() {
+        document.getElementById("popup").style.display = "block";
+    }
+
+    function hidePopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+    document.getElementById("popup").style.display = "none";
+</script> -->
+
+<body>
+    <nav class="navbar">
+        <a href="index.html"><img src="img/logo_img.png" alt="Logo" width="100px"></a>
+        <ul class="navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+        </ul>
+        <div class="navbar-search">
+            <input type="text" placeholder="Search a Tag" id="myInput">
+            <button class="button" onclick="searchAndShowPopup1()" class="user-icon">Search</button>
+            <!-- <a class="button" href="#popup1"><img style="width: 30px; border-radius: 80%;" onmouseover="showPopup()" onmouseout="hidePopup()" class="user-icon" src="img/abhinav.png" alt="image"></a> -->
+        </div>
+
+        <ul class="navbar-nav navbar-login">
+            <li><a href="login_choose.html">Login</a></li>
+        </ul>
+
+        <a href="signup_choose.html" style="text-decoration: none;"><button class="navbar-signup"> Sign Up </button></a>
+    </nav>
+
+    <!-- searchbox start -->
+    <!-- <div class="main-wrap"> -->
+    <!-- <div class="input-container">
+                        <input type="text" id="myInput" placeholder="Search for names..">
+                        <button onclick="searchAndShowPopup()">Search</button>
+                    </div> -->
+    <div id="popup" class="popup1">
+        <!-- <span class="close" onclick="hidePopup()">&times;</span> -->
+        <iframe id="popupIframe"></iframe>
+        <button class="close-btn1" onclick="hidePopup1()">X</button>
+    </div>
+    <!-- </div> -->
+    <!-- searchbox stop -->
+
+    <div class="container" style="z-index: -1;">
+        <div class="iframe-container">
+            <video src="video/Untitled video - Made with Clipchamp.mp4" autoplay muted loop></video>
+        </div>
+    </div>
+
+    <div class="vision-block-container" style="z-index: -1;">
+        <div class="vision-block">
+            <p class="big-font" style="font-size: 30px;">Our Vision</p>
+            <p style="font-family: Heebo, sans-serif; font-size: 17px;">AdVintage redefines advertising through innovative, inclusive, and purpose-driven approaches. We seamlessly connect businesses with receptive audiences, fostering authentic connections that fuel growth. Our vision transcends profits – we're
+                cultivating empowered, mutually uplifting business communities. We strive to catalyze positive change, setting new standards for impactful, authentic advertising that inspires, informs, and enriches. AdVintage bridges affordability, accessibility,
+                and excellence to propel advertising's role in shaping a promising future.
+            </p>
+            <br>
+            <!-- <button class="explore-button">Explore more</button> -->
+        </div>
+        <br>
+    </div>
+
+    <div class="block">
+        <div class="block-1">
+            <p class="big-font" style="font-size: 18px;">Our operations revolve around a lead-centric approach.</p>
+            <p>Our approach focuses on generating and converting leads for clients.</p>
+            <br><br>
+            <!-- <button class="explore-button" onclick="window.location.href='services.html'">Explore more</button> -->
+        </div>
+        <div class="block-2 ">
+            <p class="big-font " style="font-size: 18px; ">Empowering shopkeepers, we drive revenue growth strategically.</p>
+            <p>Strategically empowering shopkeepers with dedicated support for revenue growth.</p>
+            <br><br>
+            <!-- <button class="explore-button " onclick="window.location.href='services.html' ">Explore more</button> -->
+        </div>
+    </div>
+    <br><br>
+
+    <div class="center-white ">
+        <div class="column ">
+            <img src="img/Bhavishya.png " alt="Image 1 ">
+            <h2>Bhavishya</h2>
+            <h3>Co-Founder</h3>
+        </div>
+        <div class="column ">
+            <img src="img/harsh.png " alt="Image 3 ">
+            <h2>Harsh</h2>
+            <h3>Co-Founder</h3>
+        </div>
+        <div class="column ">
+            <img src="img/abhinav.png " alt="Image 2 ">
+            <h2>Abhinav</h2>
+            <h3>Co-Founder</h3>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="footer ">
+        <div class="footer-container py-5 ">
+            <div class="row g-5 ">
+                <div class="flex-container ">
+                    <div class="col-lg-4 ">
+                        <div>
+                            <!-- <h4 class="footer-heading ">Our Office</h4> -->
+                            <!-- <p class="footer-info "><i class="fa fa-map-marker-alt footer-icon "></i>Manasarover, Jaipur</p> -->
+                            <!-- <p class="footer-info ">+91-87428473130</p> -->
+                            <!-- <p class="footer-info "><i class="fa fa-envelope footer-icon "></i>@gmail.com</p> -->
+                            <h2 class="footer-heading " style="text-decoration: underline;">Contact Us:</h2>
+                            <br>
+                            <div style="display: flex; flex-direction: row;">
+                                <p>Phone: </p>
+                                <p>&nbsp;+91-&nbsp;8742847313</p>
+                            </div>
+                            <br>
+                            <div style="display: flex; flex-direction: row;">
+                                <p>Email:</p>&nbsp; &nbsp;
+                                <p>advintage.live@gmail.com</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class=" col-lg-4 ">
+                        <div class="footer-section ">
+                            <h2 class="footer-heading" style="text-decoration: underline;">Links</h2>
+                            <a class="footer-link " href="home.html ">Home</a>
+                            <a class="footer-link " href="about.html ">About</a>
+                            <a class="footer-link " href="service.html">Service</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 ">
+                        <div class="flex-btn ">
+                            <div class="footer-section footer-buttons ">
+                                <li style="list-style: none; ">
+                                    <h2 class="footer-heading" style="text-decoration: underline;">Forms</h2>
+                                    <a href="# " class="footer-link ">Query</a>
+                                    <a href="# " class="footer-link ">Feedback</a>
+                                </li>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+</body>
+
+</html>

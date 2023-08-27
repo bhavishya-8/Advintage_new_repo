@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ajax Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                url: "http://43.205.124.179/cgi-bin/bhavishya/example.py", // Correct full URL to your CGI script
+                type: "GET",
+                dataType: "json", // Expect JSON response
+                success: function(response) {
+                    var xValue = response.x;
+                    $("#xValueContainer").text("Value of x: " + xValue);
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="xValueContainer"></div>
+</body>
+
+</html>

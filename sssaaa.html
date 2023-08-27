@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>AdVintage</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow">
+</head>
+<style>
+    .box {
+        /* width: 20%; */
+        /* margin: 0 auto; */
+        background: rgba(255, 255, 255, 0.2);
+        padding: 10%;
+        border: 2px solid #fff;
+        /* border-radius: 20px/50px; */
+        /* background-clip: padding-box; */
+        /* text-align: center; */
+    }
+    
+    .select-option {
+        font-size: 1em;
+        padding: 10px;
+        /* color: #fff; */
+        /* border: 2px solid #06D85F; */
+        /* border-radius: 20px/50px; */
+        /* text-decoration: none; */
+        /* cursor: pointer; */
+        /* transition: all 0.3s ease-out; */
+    }
+    
+    .overlay {
+        position: fixed;
+        top: 0;
+        /* bottom: 0; */
+        left: 0;
+        /* right: 1; */
+        background: rgba(0, 0, 0, 0.7);
+        transition: opacity 500ms;
+        visibility: hidden;
+        opacity: 0;
+        margin-top: 52px;
+        margin-left: 1100px;
+        /* padding-right: -200px; */
+        border: black solid;
+    }
+    
+    .overlay:target {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .popup {
+        /* margin: ; */
+        padding: 20px;
+        background: #fff;
+        border-radius: 5px;
+        width: 150px;
+        position: relative;
+        transition: all 5s ease-in-out;
+    }
+    
+    .popup h2 {
+        margin-top: 0;
+        color: #333;
+        font-family: Tahoma, Arial, sans-serif;
+    }
+    
+    .popup .close {
+        position: absolute;
+        top: 1px;
+        right: 10px;
+        transition: all 200ms;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #333;
+    }
+    
+    .popup .close:hover {
+        color: #1414f5;
+    }
+    
+    .popup .content {
+        max-height: 30%;
+        overflow: auto;
+    }
+    
+    .popup li a {
+        text-decoration: none;
+        color: #333;
+    }
+    
+    .popup li a:hover {
+        color: #4311f5;
+    }
+    
+    .flex-container {
+        height: 300px;
+        display: flex;
+        padding: 10px;
+    }
+    
+    .item {
+        flex: auto;
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+    
+    .center {
+        margin: auto;
+        margin-top: 100px;
+        width: 60%;
+        height: 300px;
+        padding: 10px;
+    }
+    
+    .center-sed {
+        margin: auto;
+        margin-top: 10px;
+        width: 60%;
+        height: 300px;
+        padding: 10px;
+    }
+    
+    .asd {
+        height: 40%;
+        width: 100%;
+        text-align: center;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    .row {
+        display: flex;
+    }
+    /* Create two equal columns that sits next to each other */
+    
+    .column {
+        flex: 50%;
+        height: 100px;
+        /* Should be removed. Only for demonstration */
+    }
+    
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html"><img src="img/logo_img.png" alt="Logo" width="100px"></a>
+        <ul class="navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+        </ul>
+        <form class="navbar-search" action="#">
+            <input type="text" placeholder="Search a Tag">
+            <button type="submit">Search</button>
+        </form>
+        <a class="button" href="#popup1"><img style="width: 30px; border-radius: 80%;" onmouseover="showPopup()" onmouseout="hidePopup()" class="user-icon" src="img/abhinav.png" alt="image"></a>
+    </nav>
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                <ul>
+                    <li>
+                        <div class="box">
+                            <a class="select-option" href="" style="text-shadow: #333; padding-right: 10px; font-family: PT Sans Narrow , sans-serif;">Account</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <a class="select-option" href="" style="text-shadow: #333; padding-right: 10px; font-family: PT Sans Narrow , sans-serif;">Help</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box ">
+                            <a class="select-option " href="" style="text-shadow: #333; padding-right: 10px; font-family: PT Sans Narrow , sans-serif;">History</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="center">
+        <div class="asd">
+            <div class="row">
+                <div class="column" style="background-color:#aaa;text-align: right;">
+                    <h2>Total Money:</h2>
+
+                </div>
+                <div class="column" style="background-color:#bbb;text-align: left;">
+                    <h2>₹ 54</h2>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column" style="background-color:#aaa;">
+                <div>
+                    <label for=" cars ">Choose a car:</label>
+                    <select id="cars " name="cars ">
+                        <option value="volvo ">Volvo</option>
+                        <option value="saab ">Saab</option>
+                        <option value="fiat ">Fiat</option>
+                        <option value="audi ">Audi</option>
+                      </select>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+    </div>
+    <div class="center-sed">
+        <table>
+            <tr>
+                <th>Company</th>
+
+            </tr>
+            <tr>
+                <td>Alfreds Futterkiste</td>
+
+            </tr>
+            <tr>
+                <td>Centro comercial Moctezuma</td>
+
+            </tr>
+            <tr>
+                <td>Ernst Handel</td>
+            </tr>
+            <tr>
+                <td>Island Trading</td>
+
+            </tr>
+            <tr>
+                <td>Laughing Bacchus Winecellars</td>
+
+            </tr>
+            <tr>
+                <td>Magazzini Alimentari Riuniti</td>
+
+            </tr>
+        </table>
+
+    </div>
+</body>
